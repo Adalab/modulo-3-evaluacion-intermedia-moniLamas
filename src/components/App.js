@@ -76,7 +76,7 @@ const App = () => {
           />
           <div className="form-check">
             <label htmlFor="week">
-              ¿Abre los fines de semana?
+              ¿Abre entre semana?
               <input
                 type="checkbox"
                 name="week"
@@ -86,7 +86,7 @@ const App = () => {
               />
             </label>
             <label htmlFor="weekend">
-              ¿Abre entre semana?
+              ¿Abre los fines de semana?
               <input
                 type="checkbox"
                 name="weekend"
