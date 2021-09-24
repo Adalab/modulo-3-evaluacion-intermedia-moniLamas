@@ -40,7 +40,7 @@ const App = () => {
   const htmlClubsList = clubs.map((club, index) => (
     <li key="index" className="club__item">
       <p>
-        #{index}: {club.name}
+        #{index + 1}: {club.name}
       </p>
       <p>Abierto entre semana: {club.openOnWeekdays ? "Sí" : "No"}</p>
       <p>Abierto el fin de semana: {club.openOnWeekend ? "Sí" : "No"}</p>
@@ -50,8 +50,8 @@ const App = () => {
   return (
     <div className="page">
       <header>
-        <h1>Mis clubs</h1>
-        <form>
+        <h1 className="header__title">Mis clubs</h1>
+        <form className="header__form">
           <label htmlFor="show">Mostrar</label>
           <select name="show" id="show">
             <option value="todos">todos</option>
@@ -63,8 +63,8 @@ const App = () => {
       </header>
       <main>
         <ul className="clubs__list">{htmlClubsList}</ul>
+        <h2 className="main__title">Añadir un nuevo club</h2>
         <form>
-          <h2>Añadir un nuevo club</h2>
           <hr />
           <label htmlFor="nameClub">Nombre del club</label>
           <input
@@ -74,8 +74,8 @@ const App = () => {
             onChange={handleChangeNewClub}
             value={newName}
           />
-          <div class="form-check">
-            <label class="week">
+          <div className="form-check">
+            <label htmlFor="week">
               ¿Abre los fines de semana?
               <input
                 type="checkbox"
@@ -83,10 +83,9 @@ const App = () => {
                 id="week"
                 onChange={handleChangeNewOpenWeek}
                 value={newOpenWeek}
-                // checked
               />
             </label>
-            <label class="weekend">
+            <label htmlFor="weekend">
               ¿Abre entre semana?
               <input
                 type="checkbox"
@@ -94,7 +93,6 @@ const App = () => {
                 id="weekend"
                 onChange={handleChangeNewOpenWeekend}
                 value={newOpenWeekend}
-                // checked
               />
             </label>
           </div>
