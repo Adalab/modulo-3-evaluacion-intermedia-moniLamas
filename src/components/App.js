@@ -76,23 +76,23 @@ const App = () => {
           />
           <div className="form-check">
             <label htmlFor="week">
-              ¿Abre los fines de semana?
+              ¿Abre entre semana?
               <input
                 type="checkbox"
                 name="week"
                 id="week"
                 onChange={handleChangeNewOpenWeek}
-                value={newOpenWeek}
+                checked={newOpenWeek ? true : false}
               />
             </label>
             <label htmlFor="weekend">
-              ¿Abre entre semana?
+              ¿Abre los fines de semana?
               <input
                 type="checkbox"
                 name="weekend"
                 id="weekend"
                 onChange={handleChangeNewOpenWeekend}
-                value={newOpenWeekend}
+                checked={newOpenWeekend ? true : false}
               />
             </label>
           </div>
