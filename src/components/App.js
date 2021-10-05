@@ -18,7 +18,7 @@ const App = () => {
   };
 
   const handleChangeNewOpenWeekend = (ev) => {
-    setNewOpenWeekend(ev.target.checked ? "true" : "false");
+    setNewOpenWeekend(ev.target.checked);
   };
 
   const handleClick = (ev) => {
