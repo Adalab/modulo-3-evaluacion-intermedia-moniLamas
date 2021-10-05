@@ -6,15 +6,15 @@ const App = () => {
   const [clubs, setClubs] = useState(originalsClubs);
 
   const [newName, setNewName] = useState("");
-  const [newOpenWeek, setNewOpenWeek] = useState("");
-  const [newOpenWeekend, setNewOpenWeekend] = useState("");
+  const [newOpenWeek, setNewOpenWeek] = useState("false");
+  const [newOpenWeekend, setNewOpenWeekend] = useState("false");
 
   const handleChangeNewClub = (ev) => {
     setNewName(ev.currentTarget.value);
   };
 
   const handleChangeNewOpenWeek = (ev) => {
-    setNewOpenWeek(ev.target.checked ? "true" : "false");
+    setNewOpenWeek(ev.target.checked);
   };
 
   const handleChangeNewOpenWeekend = (ev) => {
